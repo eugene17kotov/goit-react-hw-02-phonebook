@@ -64,17 +64,15 @@ export class App extends Component {
 
     return (
       <Box p={4}>
-        <Box>
-          <h1>Phonebook</h1>
-          <ContactForm onSubmit={this.formSubmitHandler} />
+        <h1>Phonebook</h1>
+        <ContactForm onSubmit={this.formSubmitHandler} />
 
-          <h2>Contacts</h2>
-          <Filter filter={filter} onChange={this.handleFilterChange} />
-          <ContactList
-            filtredContacts={filteredContacts}
-            onDeleteContact={this.deleteContact}
-          />
-        </Box>
+        <h2>Contacts</h2>
+        <Filter filter={filter} onChange={this.handleFilterChange} />
+        <ContactList
+          filtredContacts={filteredContacts}
+          onDeleteContact={this.deleteContact}
+        />
       </Box>
     );
   }
