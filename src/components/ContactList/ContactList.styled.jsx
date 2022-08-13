@@ -25,7 +25,3 @@ export const StyledContact = styled.li`
         left: 0;
     };
 `;
-
-export const ContactInfo = styled.p`
-    margin-right: ${p => p.theme.space[4]}px;
-`;

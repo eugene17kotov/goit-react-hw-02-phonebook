@@ -4,6 +4,11 @@ import { StyledLabel, StyledInput } from 'components/Filter/Filter.styled';
 import { Box } from 'utils/Box';
 
 export class Filter extends Component {
+  static propTypes = {
+    filter: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+  };
+
   render() {
     const { filter, onChange } = this.props;
 
@@ -25,8 +30,3 @@ export class Filter extends Component {
     );
   }
 }
-
-Filter.propTypes = {
-  filter: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
