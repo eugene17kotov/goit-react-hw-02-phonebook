@@ -11,9 +11,10 @@ export function ContactList({ filtredContacts, onDeleteContact }) {
       {filtredContacts.map(({ id, name, number }) => (
         <StyledContact key={id}>
           <ContactItem
+            id={id}
             name={name}
             number={number}
-            onDeleteContact={() => onDeleteContact(id)}
+            onDeleteContact={onDeleteContact}
           />
         </StyledContact>
       ))}

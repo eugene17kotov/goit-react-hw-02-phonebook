@@ -2,12 +2,16 @@ import PropTypes from 'prop-types';
 import { Button } from 'components/Button/Button';
 import { ContactInfo } from 'components/ContactItem/ContactItem.styled';
 
-export function ContactItem({ name, number, onDeleteContact }) {
+export function ContactItem({ id, name, number, onDeleteContact }) {
   return (
     <>
       <ContactInfo>{name}</ContactInfo>
       <ContactInfo>{number}</ContactInfo>
-      <Button title="delete" type="button" onClick={onDeleteContact} />
+      <Button
+        title="delete"
+        type="button"
+        onClick={() => onDeleteContact(id)}
+      />
     </>
   );
 }
